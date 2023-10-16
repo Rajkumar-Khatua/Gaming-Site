@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo', sans-serif;
+/* font-family: 'Nunito', sans-serif; */
+::-webkit-scrollbar {
+  width: 5px;
+  display: none;
+  /* background: #000; */
+}
+}

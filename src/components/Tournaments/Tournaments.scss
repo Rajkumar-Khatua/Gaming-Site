@@ -1,0 +1,163 @@
+.tournaments {
+  height: fit-content;
+  width: 100%;
+  background-color: #040d17;
+  padding: 10px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+
+  @media screen and (max-width: 1024px) {
+    height: fit-content;
+    gap: 50px;
+    padding: 20px 50px;
+  }
+  @media screen and ( max-width:1224px) {
+    height: fit-content;
+  }
+  .head__Container {
+    .tournament__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      padding-top: 1rem;
+
+      .tournamentTitle {
+        background: #00eebd;
+        height: 6px;
+        width: 50px;
+        margin: 0 auto;
+        transform: skew(-45deg);
+      }
+    }
+  }
+
+  .card__parent {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1024px) {
+      gap: 30px;
+      padding-bottom: 20px;
+    }
+
+    .card__container {
+      height: 380px;
+      width: 400px;
+      color: #fff;
+      background: linear-gradient(
+        134deg,
+        #071626 -7.75%,
+        rgba(7, 22, 38, 0) 136.66%
+      );
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+      @media screen and (max-width: 1024px) {
+        height: 320px;
+        width: 350px;
+        &:nth-child(5) {
+          display: none; // Hide the third card for larger devices
+        }
+        &:nth-child(6) {
+          display: none; // Hide the third card for larger devices
+        }
+      }
+
+      .card__img__container {
+        border-radius: 10px 10px 0px 0px;
+        overflow: hidden;
+
+        .cardImg {
+          height: 197px;
+          width: 100%;
+          object-fit: cover;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          @media screen and (max-width: 1024px) {
+            height: 150px;
+            width: 100%;
+          }
+        }
+      }
+
+      .info__container {
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .info__container__title {
+          font-size: 20px;
+          font-weight: bold;
+          @media screen and (max-width: 1024px) {
+            font-size: 16px;
+          }
+        }
+        .info__container__timeDate {
+          font-size: 16px;
+          @media screen and (max-width: 1024px) {
+            font-size: 14px;
+          }
+        }
+        .info__container__price {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          // justify-content: space-between;
+          @media screen and (max-width: 1024px) {
+            gap: 10px;
+          }
+
+          .info__container__prices {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            @media screen and (max-width: 1024px) {
+              gap: 2px;
+            }
+
+            .playMode {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .viewMore {
+    background: linear-gradient(148deg, #0a1f35 -9.88%, #040d17 155.68%);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    transform: skew(-10deg);
+    display: inline-block;
+    overflow: hidden;
+    width: 170px;
+    align-self: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.5s ease-in-out;
+    word-spacing: 0.1rem;
+    &:hover {
+      color: #fff;
+      box-shadow: 5px 5px 15px rgba(30, 108, 139, 0.63);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+      animation: fadeIn 1s ease-in-out;
+      cursor: pointer;
+    }
+  }
+}

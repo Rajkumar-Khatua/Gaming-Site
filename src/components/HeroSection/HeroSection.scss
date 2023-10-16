@@ -1,0 +1,257 @@
+.hero {
+  background-image: linear-gradient(
+      to top right,
+      rgba(11, 83, 95, 0.822),
+      transparent
+    ),
+    url("../../assets/images/bgImg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 98vh;
+  width: 100%;
+  overflow: hidden;
+
+  @media screen and (max-width: 1280px) {
+    height: fit-content;
+  }
+  @media screen and (max-width: 1024px) {
+    height: fit-content;
+  }
+  @media screen and (max-width: 768px) {
+    height: fit-content;
+  }
+  .desktop-nav {
+    display: block; /* Display the desktop navbar by default */
+  }
+
+  .mobile-nav {
+    display: none; /* Hide the mobile navbar by default */
+  }
+
+  @media screen and (max-width: 1024px) {
+    .desktop-nav {
+      display: none; /* Hide the desktop navbar on smaller devices */
+    }
+    .mobile-nav {
+      display: block; /* Show the mobile navbar on smaller devices */
+    }
+  }
+
+  .heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 50px 20px;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 50px 20px;
+      flex-direction: column;
+      gap: 70px;
+    }
+    @media screen and (max-width: 1280px) {
+      padding: 50px 40px;
+    }
+    .hero__left__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex: 6;
+
+      @media screen and (max-width: 1280px) {
+        flex: 4;
+        align-items: center;
+      }
+      @media screen and (max-width: 1024px) {
+        flex: 1;
+        gap: 20px;
+      }
+      @media screen and (max-width: 768px) {
+        flex: 1;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .hero__left__contain {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+
+        @media screen and (max-width: 1280px) {
+          align-items: flex-start;
+          justify-content: center;
+        }
+        @media screen and (max-width: 1024px) {
+          align-items: center;
+          gap: 10px;
+        }
+        @media screen and (max-width: 768px) {
+          align-items: flex-start;
+          gap: 5px;
+        }
+        .first__heading__hero__title {
+          font-size: 40px;
+          font-weight: 700;
+          color: #fff;
+          @media screen and (max-width: 1280px) {
+            font-size: 42px;
+          }
+          @media screen and (max-width: 1024px) {
+            font-size: 30px;
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 25px;
+          }
+          .__heading__tittle__style {
+            color: #00eebd;
+          }
+        }
+        .second__heading__hero__subTitle {
+          font-size: 50px;
+          font-weight: bolder;
+          color: #fff;
+          font-weight: bolder;
+          @media screen and (max-width: 1024px) {
+            font-size: 50px;
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 40px;
+          }
+        }
+      }
+      .hero__button {
+        width: 230px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-align: center;
+        transform: skew(-10deg);
+        @media screen and (max-width: 1280px) {
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+        @media screen and (max-width: 1024px) {
+          // width: 200px;
+          // height: 50px;
+        }
+        .hero__btn__join__tournament {
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(97deg, #144558, #0e3b4c);
+          border: none;
+          color: rgb(255, 255, 255);
+          font-size: 18px;
+          font-weight: 700;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+              0 0 20px rgba(255, 255, 255, 0.8),
+              0 0 30px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 1s ease-in-out;
+          }
+        }
+        .hero__btn__join__tournament:hover {
+          color: #fff;
+          box-shadow: 5px 5px 15px rgba(30, 108, 139, 0.63);
+        }
+        @media screen and (max-width: 768px) {
+          width: 200px;
+          height: 50px;
+          .hero__btn__join__tournament {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .hero__right__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 4;
+
+      @media screen and (max-width: 1280px) {
+        flex: 6;
+      }
+
+      @media screen and (max-width: 1024px) {
+        // flex: 1;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 0px 5px;
+      }
+      // 1280px
+      @media screen and (max-width: 1280px) {
+      }
+    }
+
+    .hero__right__image {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 1280px) {
+        gap: 30px;
+        padding-top: 50px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        gap: 20px;
+      }
+      @media screen and (max-width: 768px) {
+        gap: 15px;
+        padding: 0;
+      }
+    }
+
+    .hero__right__images {
+      height: 220px;
+      width: 220px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      object-fit: cover;
+
+      @media screen and (max-width: 1280px) {
+        height: 280px;
+        width: 270px;
+      }
+      @media screen and (max-width: 1024px) {
+        height: 200px;
+        width: 190px;
+      }
+      @media screen and (max-width: 768px) {
+        height: 150px;
+        width: 127px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 5px 15px rgba(30, 108, 139, 0.63);
+      }
+    }
+
+    .hero__right__images:nth-child(1),
+    .hero__right__images:nth-child(3) {
+      margin-top: -40px; /* Adjust the margin to raise the first and third images slightly */
+    }
+  }
+}

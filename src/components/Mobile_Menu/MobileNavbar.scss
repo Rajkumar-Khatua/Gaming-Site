@@ -1,0 +1,72 @@
+.mobile-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: linear-gradient(
+    0deg,
+    rgba(1, 10, 17, 0.98) 0%,
+    rgba(1, 10, 17, 0.98) 100%
+  );
+  color: #fff;
+  padding: 0 20px;
+  
+
+  .mobile-navbar__logo {
+    font-size: 24px;
+    font-weight: bold;
+
+    .MM__logo {
+      cursor: pointer;
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+    }
+  }
+
+  .mobile-navbar__menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .mobile-navbar__links {
+    height: calc(100vh - 10px);
+    z-index: 2;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+
+    margin-top: 15px;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      top: 60px; /* Adjust this value to control the dropdown position */
+      background: linear-gradient(
+        0deg,
+        rgba(1, 10, 17, 0.96) 0%,
+        rgba(1, 10, 17, 0.96) 100%
+      );
+      left: 0;
+      width: 100%;
+      padding: 10px;
+
+      li {
+        margin: 10px 0;
+        font-size: 25px;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          font-weight: bold;
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+          animation: fadeIn 1s ease-in-out;
+        }
+      }
+    }
+  }
+}

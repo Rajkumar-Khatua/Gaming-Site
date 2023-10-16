@@ -1,0 +1,186 @@
+.aboutUs {
+  height: fit-content;
+  background-color: #040d17;
+  width: 100%;
+  padding: 100px 50px;
+  color: #fff;
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 20px;
+    height: fit-content;
+  }
+
+  .about__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 2rem;
+
+    .aboutTitle {
+      background: #00eebd;
+      height: 6px;
+      width: 50px;
+      margin: 0 auto;
+      transform: skew(-45deg);
+    }
+  }
+
+  .about__container {
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    gap: 70px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left__About__Container {
+      flex: 1;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+
+      .left__about__img {
+        height: 395px;
+        width: 380px;
+        object-fit: cover;
+        background-image: linear-gradient(to bottom, #d9d9d91c, transparent),
+          url("../../assets/images/aboutBg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        transform: skew(-2deg);
+
+        @media screen and (max-width: 768px) {
+          height: 325px;
+          width: 320px;
+        }
+        @media screen and (max-width: 1024px) {
+          height: 300px;
+          width: 300px;
+        }
+      }
+    }
+
+    .right__About__Container {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .right__about__top__sub__container {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          gap: 20px;
+        }
+        @media screen and (max-width: 1024px) {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .right__about__top__sub__container__box {
+          height: 92px;
+          width: 202px;
+          background: linear-gradient(144deg, #0a1f35 -9.37%, #040d17 115.21%);
+          transform: skew(-5deg);
+          transform-origin: left;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+          border: 1px solid #346296;
+          align-items: center;
+
+          @media screen and (max-width: 768px) {
+            height: 80px;
+            width: 300px;
+          }
+          @media screen and (max-width: 1024px) {
+            height: 80px;
+            width: 100%;
+          }
+        }
+      }
+
+      .right__about__middle__sub__container {
+        @media screen and (max-width: 768px) {
+          text-align: justify;
+          width: 100%;
+        }
+
+        .right__about__middle__sub__container__text {
+          font-size: 16px;
+          line-height: 1.8rem;
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px; // Adjust font size for mobile
+            text-align: justify;
+          }
+          @media screen and (max-width: 1024px) {
+            font-size: 14px; // Adjust font size for mobile
+            text-align: justify;
+            flex-direction: column;
+            gap: 50px;
+          }
+        }
+      }
+
+      .right__about__bottom__sub__container {
+        .about__btn {
+          background-color: rgba(10, 31, 53, 1);
+          border: none;
+          color: rgb(255, 255, 255);
+          width: 187px;
+          height: 54px;
+          font-size: 16px;
+          cursor: pointer;
+          transform: skew(-10deg);
+          display: inline-block;
+          margin: 0;
+          transition: transform 0.5s ease-in-out;
+          word-spacing: 0.1rem;
+          font-weight: bold;
+          font-size: 18px;
+
+          @media screen and (max-width: 768px) {
+          }
+        }
+
+        .about__btn:hover {
+          color: #ffffff;
+          box-shadow: 5px 5px 15px rgba(30, 108, 139, 0.63);
+          transition: 0.5s ease-in-out;
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+          animation: fadeIn 1s ease-in-out;
+        }
+
+        .right__about__bottom__sub__container {
+          text-align: center;
+        }
+
+        .about__button {
+          display: inline-block;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
